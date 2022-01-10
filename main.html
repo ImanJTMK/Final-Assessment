@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style/style.css" />
+
+    <title>Profile</title>
+  </head>
+  <body onload="myfunction()">
+
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a>PROFILE</a>
+        </div>
+
+        <div class="menu" id="nav-menu">
+          <ul class="list">
+            <li class="item"><a href="#home" class="nav-link">Home</a></li>
+            <li class="item"><a href="#about" class="nav-link">About</a></li>
+            <li class="item"><a href="#skills" class="nav-link">Skills</a></li>
+            <li class="item"><a href="#question" class="nav-link">Question</a></li>
+            <li class="item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main">
+      <section class="about section" id="home">
+
+        <div class="about-container bd-grid">
+          <div class="about-img">
+            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="img/profpic.PNG" alt="" />
+          </div>
+
+          <script>
+              function normalImg(x) {
+              x.style.height = "300px";
+              x.style.width = "300px";
+            }
+            function bigImg(x) {
+              x.style.height = "350px";
+              x.style.width = "350px";
+            }
+            </script>
+
+          <div>
+            <h2 class="about-subtitle">Encik Soloz H.Cormen</h2>
+            <p class="about-text">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptate cum expedita quo culpa tempora, assumenda, quis fugiat
+              ut voluptates soluta, aut earum nemo recusandae cumque
+              perferendis! Recusandae alias accusamus atque.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="about">
+        <h2 class="section-title">About</h2>
+        <div class="skills-container bd-grid">
+        <h2>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</h2>
+        </div>
+      </section>
+
+      <section class="skills section" id="skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-container bd-grid">
+          <div>
+            <div class="skills-data">
+              <div class="skills-names">
+                <span>Technical writing</span>
+              </div>
+              <div>
+                <span>80%</span>
+              </div>
+            </div>
+
+            <div class="skills-data">
+              <div class="skills-names">
+                <span>Cybersecurity</span>
+              </div>
+              <div>
+                <span>90%</span>
+              </div>
+            </div>
+
+            <div class="skills-data">
+              <div class="skills-names">
+                <span>Robotic Process Automation</span>
+              </div>
+              <div>
+                <span>80%</span>
+              </div>
+            </div>
+
+            <div class="skills-data">
+              <div class="skills-names">
+                <span>Autonomous Driving</span>
+              </div>
+              <div>
+                <span>89%</span>
+              </div>
+            </div>
+
+            <div class="skills-data">
+                <div class="skills-names">
+                  <span>Project Management</span>
+                </div>
+                <div>
+                  <span>80%</span>
+                </div>
+            </div>
+
+            <div class="skills-data">
+                <div class="skills-names">
+                  <span>Artificial Intelligence / Machine Learning</span>
+                </div>
+                <div>
+                  <span>95%</span>
+                </div>
+            </div>
+
+            <div class="skills-data">
+                <div class="skills-names">
+                  <span>Big Data and Internet of Things</span>
+                </div>
+                <div>
+                  <span>90%</span>
+                </div>
+            </div>
+
+            <div class="skills-data">
+                <div class="skills-names">
+                  <span>IT Service Management</span>
+                </div>
+                <div>
+                  <span>85%</span>
+                </div>
+            </div>
+
+            <div class="skills-data">
+                <div class="skills-names">
+                  <span>Marketing Automation</span>
+                </div>
+                <div>
+                  <span>95%</span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills section" id="question">
+        <h2 class="section-title">Question</h2>
+        <div class="skills-container bd-grid">
+        <h2>Looking for solutions to Exercises and Problems?</h2>
+        </div>
+
+        <div class="contact-container bd-grid">
+            <form action="" name="myForm" onsubmit="return validateForm()" class="question-form">
+                <textarea input type="text" name="fname" cols="0" rows="10" class="contact-input" onfocus="myFunction(this)" placeholder="Ask here..."></textarea>
+                <script>
+                    function myFunction(x) {
+                      x.style.background = "cyan";
+                    }
+                </script>
+
+                <script>
+                function validateForm() {
+                    var x = document.forms["myForm"]["fname"].value;
+                    if (x == "" || x == null) {
+                        alert("Form must be filled out");
+                        return false;
+                    }
+                    else{
+                        alert("Your form has been submitted")
+                        return false;
+                    }
+                }
+                </script>
+
+                <input type="submit" value="Submit" class="contact-button button">
+                
+            </form>
+        </div>
+
+      </section>
+
+      <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-container bd-grid">
+            <form action="" class="contact-form">
+                <input type="text" placeholder="Name" id="fname" onblur="myFunction1()" class="contact-input">
+                <input type="mail" placeholder="Email" class="contact-input">
+                <textarea name="" id="" cols="0" rows="10" class="contact-input"></textarea>
+                <input type="button" value="Submit" class="contact-button button">
+
+                <script>
+                    function myFunction1() {
+                      var x = document.getElementById("fname");
+                      x.value = x.value.toUpperCase();
+                    }
+                    </script>
+
+            </form>
+        </div>
+    </section>
+    </main>
+
+    <script>
+        function myfunction() {
+          alert("Welcome Visitor!");
+        }
+        </script>
+</body>
+</html>
